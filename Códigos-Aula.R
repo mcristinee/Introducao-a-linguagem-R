@@ -34,4 +34,26 @@ b * a
 vetor1 = c(2,3,4,5,6) 
 vetor2 = 10
 
-vetor2 - vetor 1
+vetor2 - vetor1
+
+# Podemos criar sequencias aqui no R.
+
+vetor3 = seq(from = 1, to = 2, length.out = 5)
+vetor4 = seq(from = 0, to = 2, by = 0.5)
+
+# Podemos repetir algum item tambem
+
+vetor5 = rep("verao", 5)
+vetor6 = rep(c("verao", "inverno"), each = 2)
+
+# Aqui podemos tambem criar uma "Planilha" que no R é chamada de Data.frame
+planilha = data.frame (vetor1, vetor2, vetor3, vetor4, vetor5)
+
+print(planilha)
+
+
+
+#Exercício 1
+
+# Crie uma planilha com 4 variáveis, 2 categóricas, 2 contínuas.
+## Com N = 20.
