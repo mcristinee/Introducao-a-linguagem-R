@@ -46,3 +46,22 @@ qqline(algas_exp$N[algas_exp$Grupo == 'Phaeophyceae'])
 
 # Gráficos
 boxplot(algas_exp$N~algas_exp$Estacao+algas_exp$Grupo)
+
+library(sciplot)
+bargraph.CI(algas_exp$Estacao, algas_exp$N, algas_exp$Grupo)
+
+bargraph.CI(algas_exp$Estacao, algas_exp$N, algas_exp$Grupo, ylim = c(0,20))
+
+bargraph.CI(algas_exp$Estacao, algas_exp$N, algas_exp$Grupo, ylim = c(0,20), ylab = "Concentracao")
+
+bargraph.CI(algas_exp$Estacao, algas_exp$N, algas_exp$Grupo, ylim = c(0,20), ylab = "Concentracao", xlab = "Estacao")
+
+
+
+Grupo = table(algas_exp$Grupo)
+SP = table(algas_exp$Especie.e.Genero)
+NS = table(algas_exp$NS)
+Estacao= table(algas_exp$Estacao)
+
+barplot(Grupo)
+plot(SP, type = "p", pch = 15)
