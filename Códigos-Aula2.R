@@ -3,13 +3,19 @@ rm(list=ls())
 
 #Leitura de daos .csv e .txt
 
-algas <-  read.csv("metais_algas.csv", sep = "\t", dec=",", header = T)
+algas <-  read.csv("metais_algas.csv", sep = '\t')
 head(algas)
 
-algas <-  read.csv("metais_algas.csv", sep = ";", dec=",", header = T)
+algas <-  read.csv("metais_algas.csv", sep = ";")
 head(algas)
+str(algas)
 
-algas_subset <-  subset(algas, select = c("Grupo","Local.da.Coleta","NS","Estacao","Pb","Zn","As"))
+algas <-  read.csv("metais_algas.csv", sep = ";", dec = ",")
+head(algas)
+str(algas)
+
+
+algas_subset <-  subset(algas, select = c("Especie.e.Genero","Grupo","Local.da.Coleta","NS","Estacao","Pb","Zn","As"))
 head(algas_subset)
 
 algas_num <-  algas[,-c(1:15)]
