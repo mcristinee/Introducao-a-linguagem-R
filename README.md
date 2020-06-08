@@ -10,4 +10,3 @@ Nesse Curso, utilizaremos o R-Studio.
     Esse programa facilita o uso e aprendizado do R. 
     Ele também é gratuito e podemos encontrá-lo nesse link.
     https://rstudio.com/
-
