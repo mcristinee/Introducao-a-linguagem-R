@@ -64,4 +64,27 @@ NS = table(algas_exp$NS)
 Estacao= table(algas_exp$Estacao)
 
 barplot(Grupo)
-plot(SP, type = "p", pch = 15)
+
+
+# Utilizando a planilha Iris. 
+
+#COnsiga os principais parametros de comprimento de pétala.
+## Média, Mediana, DesvPad, Maximo e Minimo.
+#Há alguma outra medida que podemos extrair dos dados?
+
+## Faça um Boxplot para comprimento da sépala e outro para comprimento da pétala. 
+
+## Faça um Histograma com os dados de largura de sépala. 
+
+# Construa um gráfico com margens = 3, aumento dos eixos e um título. 
+#Use as cores, azul, verde e vermelho. Os dados São so do Data.Frame abaixo
+A = runif(30,10,20)
+B = runif(30,20,30)
+C = runif(30,30,40)
+(para_grafico = c(A,B,C))
+
+cores=rep(c("green","blue","red"), each = 30)
+
+plot(para_grafico, col = cores, pch = rep(c(17,15,16),each = 30))
+
+     
