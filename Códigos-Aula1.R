@@ -42,6 +42,7 @@ class(c)
 #Eu posso realizar facilmente uma operaçao com vetores
 a + b
 b * a
+a + c
 
 # Posso tambem armazenar mais que 1 dado nesse vetor.
 # Mas preciso utilizar a funçao concatenar 'c()'.
