@@ -13,14 +13,14 @@
 
 16/4
 
-#Conseguimos tamb�m fazer a raiz-quadrada, mas precisamos usar uma fun�ao.
+#Conseguimos também fazer a raiz-quadrada, mas precisamos usar uma funçao.
 sqrt(81)
 
 sqrt(2)
 
 log(10)
 
-# Podemos calcular pot�ncias
+# Podemos calcular potências
 
 2^3
 12^8
@@ -35,7 +35,7 @@ median(c(12,14,15,16,19))
 mean(c(12,14,15,16,19))
 sd(c(12,14,15,16,19))
 
-#Todos esses calculos apareceram no terminal. Mas e se eu quiser armazenar em algum lugar pra usar depois em outro cálculo?
+#Todos esses calculos apareceram no terminal. Mas e se eu quiser armazenar em algum lugar pra usar depois em outro calculo?
 #Entao eu uso um 'objeto' ou como chamado no R um vetor. 
 
 ourico = c(12,14,15,16,19)
@@ -54,20 +54,20 @@ c = "Terra"
 d = "Quarentena"
 c
 
-# Os vetores podem ter diferentes classes. Numérica, Caracter, numero inteiro
+# Os vetores podem ter diferentes classes. Numerica, Caracter, numero inteiro
 
 class(a)
 class(c)
 
 
-#Eu posso realizar facilmente uma operaçao com vetores
+#Eu posso realizar facilmente uma operacao com vetores
 a + b
 b * a
 a + c
 
 
 # Posso tambem armazenar mais que 1 dado nesse vetor.
-# Mas preciso utilizar a funçao concatenar 'c()'.
+# Mas preciso utilizar a funcao concatenar 'c()'.
 vetor1 = c(2,3,4,5,6,7) 
 
 vetor2 = 10
@@ -91,7 +91,7 @@ class(vetor5)
 vetor6 <- rep(c("verao", "inverno"), each = 3)
 vetor6
 
-#Podemos informar a distribuiçao e pedir que o R gere números aleatórios
+#Podemos informar a distribuiÃ§ao e pedir que o R gere numeros aleatorios
 
 vetor7 = runif(6,12,14)
 vetor7
@@ -99,7 +99,7 @@ vetor8 = rnorm(6,15,2)
 mean(vetor8)
 sd(vetor8)
 
-# Aqui podemos tambem criar uma "Planilha" que no R é chamada de Data.frame
+# Aqui podemos tambem criar uma "Planilha" que no R eh chamada de Data.frame
 planilha = data.frame (vetor1, vetor2, vetor3, vetor4, vetor5, vetor6,vetor7,vetor8)
 
 print(planilha)
@@ -126,31 +126,31 @@ uniforme = planilha$vetor7
 mean(planilha$vetor7)
 median(uniforme)
 
-#Outra forma de selecionar é através de indexaçao. Onde colocamos [,] após o nome do nosso objeto
+#Outra forma de selecionar eh atraves de indexacao. Onde colocamos [,] apos o nome do nosso objeto
 # planilha[linhas,colunas]
 planilha[,]
 
-planilha[-3,] #pegamos a 3 linha inteira
-
 planilha[,5] # Pegamos a 5 coluna inteira
 
-planilha[,-c(5,6)]
+planilha[-3,] # Removemos 3 linha inteira
 
-planilha [3,4] # pegamos o valor que está na 3 linha e 4 coluna. 
+planilha[,-c(5,6)] # Remover colunas
+
+planilha [3,4] # pegamos o valor que esta na linha 3 e coluna 4. 
 
 # Agora usaremos os dados da planilha Iris no exemplo.
 
-head(iris) # Essa funçao nos mostra as 5 primeiras linhas da planilha
+head(iris) # Essa funcao nos mostra as 5 primeiras linhas da planilha
 iris
-str(iris) # essa funçao nos mostra a estrutura da planilha, ou seja, a classe de cada uma das variáveis. 
+str(iris) # essa funcao nos mostra a estrutura da planilha, ou seja, a classe de cada uma das variaveis. 
 
-# Entao vamos começar a Manipular a planilha. Digamos que eu queira saber a média da largura das pétalas para cada espécie. 
-# COMO FAÇO ISSO?
-#Utilizo a funçao aggregate
+# Entao vamos comecar a Manipular a planilha. Digamos que eu queira saber a media da largura das petalas para cada especie. 
+# COMO FACO ISSO?
+#Utilizo a funcao aggregate
 aggregate(iris$Petal.Width~iris$Species, FUN = mean)
 
 
-# EU posso armazenar essa informaçao?
+# EU posso armazenar essa informaÃ§ao?
 (petala_largura_media = aggregate(iris$Petal.Width~iris$Species, FUN = mean))
 petala_largura_media
 
@@ -171,24 +171,24 @@ petala_largura_media$desvpad = petala_largura_desvpad$desvpad
 
 sample(100,20, replace = F)
 
-#Exercício 1
+#Exercicio 1
 # Crie um vetor com 40 numeros de 22 a 62.
 
-#Exercício 2
+#Exercicio 2
 # Crie um vetor N = 40 com as palavras Verao e Inverno 
 
-#Exercício 3
-# Crie um data.frame com 4 variáveis, 1 categórica, 3 contínuas.
+#Exercicio 3
+# Crie um data.frame com 4 variÃ¡veis, 1 categorica, 3 continuas.
 ## Com N = 40.
 
-#Exercício 4
-#Calcule a média e o desvio padrao para cada uma das variáveis. 
+#Exercicio 4
+#Calcule a media e o desvio padrao para cada uma das variaveis. 
 
-#Exercício 5
-#Calcule a média e o desvio padrao para da variável considerando as categorias. 
+#Exercicio 5
+#Calcule a media e o desvio padrao para da variavel considerando as categorias. 
 
-#Exercício 6
-# Utilizando a planilha iris, calcule a média e o desvio padrao do comprimento das sépalas.
+#Exercicio 6
+# Utilizando a planilha iris, calcule a media e o desvio padrao do comprimento das sepalas.
 
-#Exercício 7
-# Qual é o valor 10 da 3 coluna?
+#Exercicio 7
+# Qual eh o valor 10 da 3 coluna?
