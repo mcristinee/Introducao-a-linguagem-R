@@ -1,5 +1,6 @@
-# Introducao a linguagem R
+#Uso do R e análise de Dados
 Workshop de Introduçao ao uso da Linguagem R em análises ecológicas.
+    Aqui veremos como executar no RStudio as análises mais comuns na área da ecologia.
 
 
 Para o início das nossas atividades precisaremos instalar o R em nossos computadores.   
