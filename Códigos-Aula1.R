@@ -1,6 +1,6 @@
-## AULA 1
+## Manhã - Aula 1
 
-#Nessa Nossa Primeira Aula iremos entender o que o R Faz.
+#Nesta primeira parte iremos entender o que o R Faz.
 
 
 #Ele pode funcionar como uma calculadora comum. Por exemplo:
@@ -192,3 +192,95 @@ sample(100,20, replace = F)
 
 #Exercicio 7
 # Qual eh o valor 10 da 3 coluna?
+#################################################
+##                TARDE - Aula 1                #
+##                                              #
+##                                              #
+#################################################
+
+rm(list=ls())
+getwd()
+
+#Leitura de dados .csv e .txt
+## ARQUIVO SEPARADO POR TABULAçÂO
+install.packages("readxl")
+library("readxl")
+
+metais_algas <- read_excel("metais_algas.xlsx")
+
+
+
+
+algas <-  read.csv("metais_algas.csv", sep = '\t')
+head(algas)
+
+algas <-  read.csv("metais_algas.csv", sep = ";")
+head(algas)
+str(algas)
+
+algas <-  read.csv("metais_algas.csv", sep = ";", dec = ",")
+head(algas)
+str(algas)
+
+
+algas_subset <-  subset(algas, select = c("Especie.e.Genero","Grupo","Local.da.Coleta","NS","Estacao","Pb","Zn","As"))
+head(algas_subset)
+
+algas_num <-  algas[,-c(1:15)]
+head(algas_num)
+
+#USAR APPLY
+mean(algas_num$Cd)
+
+
+apply(algas_num, 2, FUN = mean)
+apply(algas_num, 1, FUN = mean)
+
+
+#USAR TAPPLY
+tapply(algas_subset$Zn,INDEX = algas_subset$Estacao, FUN = mean)
+
+
+
+#USAR AGGREGATE
+aggregate(algas_subset$As~algas_subset$Estacao+algas_subset$Grupo, FUN = var)
+
+## AGORA Utilizando dados reais, vamos tentar selecionar e calcular alguns dados utilzando o que aprendemos na ultima aula
+
+#Qual a classe da Coluna AS?
+# e da coluna NS
+# Rode a funÃ§ao str e explique a estrutura da tabela. 
+str(algas_subset)
+
+# Agora vamos entender mais funÃ§oes de manipulaÃ§ao de dados.
+
+# E se eu quisesse analisar sÃ³ os dados das Rhodophyta?
+algas$Grupo == "Rhodophyta"
+
+
+Rhodophyta = subset(algas, subset = (algas$Grupo == "Rhodophyta"))
+head(Rhodophyta)
+
+#Agora veremos qual o valor mÃ¡ximo para As em algas vermelhas. Para o Verao e Para o Inverno
+
+tapply(Rhodophyta$As, Rhodophyta$Estacao, FUN = max )
+
+# E qual o valor que representa 50% dos dados?
+
+tapply(Rhodophyta$As, Rhodophyta$Estacao, FUN = median )
+
+#################################################
+# EXercicios
+
+# Carrega a planilha metais_algas com o nome metais
+
+metais <- read.csv("metais_algas.csv", sep = ";", dec = ",")
+
+
+# Selecione os dados de Inverno para algas rhodophyta.
+
+Rhodophyta = subset(metais, subset = (metais$Grupo == "Rhodophyta"))
+
+rho_inverno = subset(Rhodophyta, subset = (Rhodophyta$Estacao == "Winter"))
+r_inverno
+
