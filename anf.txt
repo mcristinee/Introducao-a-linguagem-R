@@ -1,0 +1,116 @@
+Alga	Anfipode	temperatura
+Padina 	32	28.075
+Padina 	60	28.075
+Padina 	52	28.075
+Padina 	13	28.016
+Padina 	5	28.016
+Padina 	4	28.016
+Padina 	20	28.648
+Padina 	7	28.648
+Padina 	20	28.648
+Padina 	60	20.888
+Padina 	22	20.888
+Padina 	25	20.888
+Dichotomaria	138	28.075
+Dichotomaria	168	28.075
+Dichotomaria	124	28.075
+Dichotomaria	119	28.648
+Dichotomaria	117	28.648
+Dichotomaria	115	28.648
+Dichotomaria	165	28.016
+Dichotomaria	105	28.016
+Dichotomaria	159	28.016
+Dichotomaria	125	22.723
+Dichotomaria	111	22.723
+Dichotomaria	141	22.723
+Sargassum 	400	28.075
+Sargassum 	415	28.075
+Sargassum 	457	28.075
+Sargassum 	455	25.858
+Sargassum 	424	25.858
+Sargassum 	473	25.858
+Sargassum 	493	28.016
+Sargassum 	452	28.016
+Sargassum 	411	28.016
+Sargassum 	474	22.661
+Sargassum 	457	22.661
+Sargassum 	444	22.661
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

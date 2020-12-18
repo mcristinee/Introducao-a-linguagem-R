@@ -1,0 +1,78 @@
+riqueza	tempo	condição
+6	T1	controle
+2	T1	controle
+7	T1	controle
+3	T1	controle
+4	T2	controle
+5	T2	controle
+6	T2	controle
+4	T2	controle
+7	T3	controle
+6	T3	controle
+7	T3	controle
+6	T3	controle
+7	T4	controle
+5	T4	controle
+2	T4	controle
+2	T4	controle
+4	T5	controle
+4	T5	controle
+2	T5	controle
+6	T5	controle
+3	T6	controle
+3	T6	controle
+4	T6	controle
+4	T6	controle
+5	T7	controle
+3	T7	controle
+5	T7	controle
+5	T7	controle
+5	T8	controle
+5	T8	controle
+6	T8	controle
+7	T8	controle
+6	T1	tratamento
+1	T1	tratamento
+4	T1	tratamento
+1	T1	tratamento
+3	T2	tratamento
+5	T2	tratamento
+5	T2	tratamento
+3	T2	tratamento
+3	T3	tratamento
+3	T3	tratamento
+5	T3	tratamento
+2	T3	tratamento
+3	T4	tratamento
+6	T4	tratamento
+3	T4	tratamento
+3	T4	tratamento
+4	T5	tratamento
+4	T5	tratamento
+3	T5	tratamento
+2	T5	tratamento
+3	T6	tratamento
+3	T6	tratamento
+5	T6	tratamento
+3	T6	tratamento
+5	T7	tratamento
+5	T7	tratamento
+5	T7	tratamento
+5	T7	tratamento
+7	T8	tratamento
+6	T8	tratamento
+4	T8	tratamento
+5	T8	tratamento
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

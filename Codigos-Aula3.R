@@ -1,34 +1,54 @@
-# Aula 3 - An√°lises Explorat√≥rias e Gr√°ficos
+# Aula 3 - Manh„ = Analises Exploratorias
 rm(list=ls())
 dev.off()
 algas = read.csv("metais_algas.csv", sep = ";", dec = ",")
 head(algas)
 length(algas$As)
-
+set.seed(42)
 algas$N = rnorm(82,12,3)
 
-# An√°lise explorat√≥ria. 
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+# Analise Exploratoria 
 # DISTRIBUICAO
-  # MEDIA; MEDIANA; DESVIO PADRAO; MAX; MINIMO; 
-  # Gr√°ficos - Histograma, BoxPlot, DIspersao.
+  # MEDIA; MEDIANA;MODA; DESVIO PADRAO; MAX; MINIMO;VARIANCIA 
+  
+# PARA Essas Analises faremos um subset com os dados de metais, sal, temp, Especies, Grupos, Locais, Face e Estacao do Ano
 
-# PARA Essas AN√°lises vamos fazer um subset com os dados de metais, sal, temp, Especies, Grupos, Locais, Face e Esta√ßao do Ano
-
-algas_exp = subset(algas,select = c("Especie.e.Genero","Grupo","NS","Estacao","T.C","Salinidade","Cd","Pb","Zn","Cu","Hg","As","N"))
-head(algas_exp)
+algas_sub = subset(algas,select = c("Especie.e.Genero","Grupo","NS","Estacao","Temp","Salinidade","Cd","Pb","Zn","Cu","Hg","As","N"))
+head(algas_sub)
 
 
-algas_num = algas_exp[,-c(1:4)]
+algas_num = algas_sub[,-c(1:4)]
 media = apply(algas_num,2,mean)
 desvPad = apply(algas_num,2,sd)
 mediana= apply(algas_num,2,median)
 max = apply(algas_num,2,max)
 min = apply(algas_num,2,min)
-data.frame(media,desvPad,mediana,max,min)
-dados = t(data.frame(media,desvPad,mediana,max,min))
+moda = apply(algas_num,2,getmode)
+var = apply(algas_num,2,var)
+data.frame(media,desvPad,var,mediana,moda,max,min)
+dados = t(data.frame(media,desvPad,moda,var,mediana,max,min))
 round(dados,2)
 
+getwd()
+write.table(dados, file = "descritiva_metais.csv", sep = ";", dec = ",")
+read.table("descritiva_metais.csv", sep=";", dec = ",")
 
+
+#ExercÌcios
+#FaÁa uma an·lise descritiva da planilha (Iris), 
+##descreva os principais par‚metros totais e por espÈcie.
+
+
+#Salve esses dados em planilhas chamadas - Descritiva_sp1.csv
+
+
+# Graficos
+hist(algas_exp)
 
 hist(algas_exp$N)
 boxplot(algas_exp$N)
@@ -44,7 +64,6 @@ qqnorm(algas_exp$N[algas_exp$Grupo == 'Phaeophyceae'])
 qqline(algas_exp$N[algas_exp$Grupo == 'Phaeophyceae'])
 
 
-# Gr√°ficos
 boxplot(algas_exp$N~algas_exp$Estacao+algas_exp$Grupo)
 
 library(sciplot)
