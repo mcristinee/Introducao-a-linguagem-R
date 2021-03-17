@@ -1950,7 +1950,8 @@ text(plot.pcoa,"species", cex=0.8)
 
 
 ##MDS
-nmds.iris<-metaMDS(iris, distance = "bray", try = 100)
+iris
+nmds.iris = metaMDS(iris[,-5], distance = "bray", try = 100)
 nmds.iris # stress de 3% 
 stressplot(nmds.iris)
 
